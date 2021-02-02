@@ -1,0 +1,217 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*----------------------------------Search box-----------------------------------------------------*/
+.search-outer{
+    height:100px;
+    text-align: center;
+    width: 100%;
+    padding-top:70px ;
+    background-color: #c6e4ef;
+}
+.search-box{
+    width:500px;
+    position: relative;
+    margin: 0 auto;
+}
+.searchbox>input{
+    height:40px;
+    width:200px;
+    outline: none;
+    transition: 0.3s;
+    border: 2px solid #050a30;
+    border-radius: 50px;
+    padding-left: 10px;
+    
+}
+input:focus{
+    outline: none;
+    border:2px solid #04d4dc;
+}
+.search-button{
+    background-color:#050a30;
+    content: "";
+    width: 50px; 
+    height: 30px;
+    right: 30%;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius:50px ;
+    bottom: 0;
+    position: absolute;
+    padding-top: 10px;
+   
+}
+.search-button> button{
+    background-color: inherit;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: #04d4dc;
+    transition: 0.2s;
+}
+.search-button> button:hover{
+    color:#c6e4ef;
+    cursor: pointer;
+}
+/*********************************************************products************************************************/
+.lace-container-outer{
+  
+    width: 100%;
+   // background-color: #c6e4ef;
+}
+.lace-container-inner{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    clear: both;
+}
+.laces{
+    width:20%;
+    height: 300px;
+    float: left;
+    margin: 1.5% 0%;
+    padding:1% 2.4%;
+    transition: 0.3s;
+    border:1px solid rgb(0,0,0,0.2);
+   
+}
+.laces:hover{
+    cursor: pointer;
+    color:#233dff !important;
+    box-shadow: 0px 0px 33px -11px #000;
+}
+.limage,.lace-image{
+    height:200px;
+    width: 100%;
+}
+.lcontent{
+    height: 100px;
+}
+.ltitle{
+    font-size: 20px;
+    font-family: 'Lato';
+
+}
+.ldesc{
+    font-family: 'Lato';
+    color: rgb(0,0,0,0.4);
+}
+.lprice{
+    font-size: 19px;
+    font-family:'Montserrat';
+    color:green;
+}
+.lcolor{
+    font-size: 16px;
+    color: #050a30;
+    font-family: sans-serif;
+}
+/********************************Pagebutton************************************************************************/
+.page-button-outer{
+    width:100%;
+    height:100px;
+    padding-top: 40px;
+   // background-color: #c6e4ef;
+}
+.page-button-inner{
+    width:600px;
+    margin:0 auto;
+    height:50px;
+    text-align: center;
+  //  background-color: #050a30;
+}
+.page-button{
+    display: inline-flex;
+}
+.pgbtn{
+       height:40px;
+       font-size: 20px;
+       width:40px;
+       outline: none;
+       transition: 0.3s;
+       background-color:transparent;
+       border: 2px solid #04d4dc;
+}
+.pgbtn:hover{
+    color:#c6e4ef;
+    border-color:#050a30;
+    background-color: #050a30;
+}
+.pgbtn-selected{
+    color:#c6e4ef !important;
+    border-color:#050a30 !important;
+    background-color: #050a30 !important;
+}
+/***********************************************************Responsive****************************************************/
+
+@media only screen and (max-width:1242px) {
+    .lace-container-inner{
+        width: 85%;
+    }
+}
+@media only screen and (max-width:1150px) {
+    .lace-container-inner{
+        width: 96%;
+    }
+}
+@media only screen and (max-width:1024px) {
+
+    .lace-container-inner{
+        width: 96%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .lace-container-inner {
+        width: 90%;
+    }
+    .laces {
+        width: 28%;
+    }
+}
+@media only screen and (max-width:425px) {
+    .search-box{
+        width: 100%;
+    }
+    .search-button{
+        right: 25%;
+    }
+    .laces {
+        width: 44%;
+        height: 305px;
+        float: left;
+        margin: 2.5% 0%;
+        padding-left: 2.4%;
+        padding-right: 2.4%;
+        padding-top: 8%;
+        padding-bottom: 2.5%;
+        transition: 0.3s;
+        border: 1px solid rgb(0,0,0,0.2);
+    }
+    .limage, .lace-image {
+        height: 180px;
+    }
+    .pgbtn {
+        height: 25px;
+        font-size: 14px;
+        width: 25px;
+    }
+    .page-button-inner{
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width:375px) {
+    .laces {
+        width: 44%;
+    }
+    .search-button{
+        right: 23%;
+    }
+}
+@media only screen and (max-width:375px) {
+    .search-button{
+        right: 19%;
+    }
+}
+

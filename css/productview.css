@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.ttf ") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+.product-view-outer
+{
+    width:100%;
+    height:650px;
+    text-align: center;
+    padding-top: 50px;
+    background-color:#EEE;
+}
+.product-view-inner{
+    width:1400px;
+    height:640px;
+    display: inline-flex;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+}
+.product-view-left{
+    width:40%;
+    height: 620px;
+    float:left;
+    border:1px solid rgb(0,0,0,0.2);
+  
+}
+.product-view-right{
+    width:60%;
+    height: 100%;
+    text-align: left;
+    background-color:#FFF;
+}
+.product-view-image{
+    height:400px;
+    width:80%;
+    margin-top: 34px !important;
+    margin-bottom:20px !important ;
+    border : 1px solid rgb(0,0,0,0.2);
+    margin: 0 auto;
+}
+.view-image{
+    height:100%;
+    width:100%;
+}
+.view-image-title{
+    font-family: 'Montserrat';
+    font-size: 22px;
+    color: #050a30;
+}
+.poduct-view-image-content{
+    padding-bottom: 40px;
+}
+.order-outer{
+    width:100%;
+    height:80px;
+}
+.order-inner{
+    width:80%;
+    height:100%;
+    margin:0 auto;
+    position: relative;
+}
+.order-button{
+    height:50px;
+    width: 50%;
+    background-color:#050a30;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    color:  #c6e4ef;
+    font-family: 'Montserrat';
+    letter-spacing: 1;
+    transition: 0.2s;
+}
+.order-button:hover{
+    cursor: pointer;
+    color:#04d4dc;
+}
+.order-inner::before{
+    content:" ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top:10px;
+    background-image: url(../images/whatsapp.png);
+    background-position: 341px -1083px;
+
+}
+.view-right-title{
+    padding: 20px;
+}
+.vrtitle{
+    font-size: 22px;
+    font-family: 'Lato';
+    word-spacing: 4px;
+    color: #050a30;
+}
+.lprice{
+    font-size: 30px;
+    font-family:'Montserrat';
+    color:green;
+}
+.specification-title{
+    font-family: 'Lato';
+    width: 97%;
+    margin-top:30px !important;
+    margin: 0 auto;
+    padding: 20px 0px;
+    border: 1px solid rgb(0,0,0,0.2);
+}
+.specification-title > h2{
+    margin-left: 10px;
+}
+.specification-outer
+{
+    width: 100%;
+    height: max-content;
+}
+.specification-content{
+    width: 97%;
+    margin: 0 auto;
+    border:1px solid rgb(0,0,0,0.2);
+}
+.sptb{
+    font-size: 17px;
+    font-family: 'Lato';
+    width:100%;
+    
+} 
+.t3{
+    width:5%;
+    padding:10px 10px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.t4{
+    width:10%;
+}
+.ds1{
+    display: block;
+}
+.ds2{
+    display: none;
+}
+/********************************************Responsive*********************************************/
+@media only screen and (max-width:1024px) {
+    .product-view-inner {
+         width: 100%; 
+        height: 675px;
+         display: inline-flex; 
+        margin: 0 auto;
+        float: none;
+        /* overflow: hidden; */
+        background-color: #fff;
+    }
+    .order-button{
+        font-size: 15px;
+        width: 55%;
+    }
+    .product-view-outer{
+        height:700px;
+    }
+    .product-view-left {
+        height: 615px;
+        margin-left: 10px;
+    }
+    .vrtitle{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .order-button{
+        width:80%;
+    }
+    .product-view-left{
+        height:660px;
+    }
+}
+@media only screen and (max-width:425px) {
+    .product-view-left {
+        width: 95%;
+        height: 480px;
+    }
+    .product-view-outer{
+        height: max-content;
+    }
+    .product-view-inner{
+        height: max-content;
+        flex-direction: column;
+    }
+    .product-view-image {
+        height: 275px;
+        width: 85%;
+    }
+    .order-button{
+        width: 60%;
+    }
+    .ds1{
+        display: none;
+    }
+    .ds2{
+        display: block;
+    }
+    .product-view-right{
+        width: 100%;
+    }
+    .vrtitle{                   
+        word-spacing: 1;
+    }
+}
+@media only screen and (max-width:375px) {
+    .vrtitle{
+        font-size: 21px;
+        word-spacing: 1;
+    }
+}
+@media only screen and (max-width:320px) {
+.order-button{
+    width: 73%;
+}
+} 

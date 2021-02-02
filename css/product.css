@@ -1,0 +1,671 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf ") format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+*{
+    margin:0px;
+    padding:0px;
+}
+/***********************************************************************************HEader*********************************/
+.header{
+    width:100%;
+    height:150px;
+}
+.header-container{
+    width:100%;
+    margin:0 auto;
+    display: inline-flex;
+}
+.hlogo{
+    height:150px;
+    width:324px;
+    text-align: center;
+}
+.hleft,.hnav{
+    position: relative;
+    width:30%;
+    background-color: #050a30;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0px 1px 12px 5px rgb(0,0,0,0.7);
+}
+.tinted-block{
+    position: absolute;
+    background-color: #050a30;
+    width: 200px;
+    height: 150px;
+    top: 0;
+    z-index: -1;
+    transform: skewX(-40deg);
+}
+.t1{
+    right: -100px;
+    box-shadow: 22px -3px 12px 5px rgb(0,0,0,0.7);    
+}
+.t2{
+    left:-100px;
+    box-shadow: -22px 2px 12px 5px rgb(0,0,0,0.7);    
+}
+.hright{
+    width:40%;
+    background-color: #c6e4ef ;
+    text-align: center;
+    color: #050a30;
+    font-family: 'Lato';
+    font-size: 30px;
+    padding-top: 20px;
+    
+}
+.hright > img{
+    transform: rotateY(200deg);
+    width:200px;
+} 
+.navbar>ul{
+    display: inline-flex;
+    color:#c6e4ef;
+    font-family: 'Lato';
+    font-size: 20px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.navbar{
+    margin-top:50px;
+}
+.nav1{
+    margin:0 40px;
+}
+.navh{
+    position: relative;
+}
+.navh::after{
+    background-color: #f00;
+    content: "";
+    width: 0px; 
+    height: 3px;
+    left: 0;
+    bottom: -5;
+    position: absolute;
+    transition: 0.2s;
+}
+.navh:hover:after{
+    width: 54px; 
+}
+.navh:hover{
+    color: white;
+}
+.dropdown:hover .drop-content{
+        visibility: visible;
+}
+.content1,.content2{
+    font-size:16px;
+    border-bottom:1px solid rgb(0,0,0,0.7);
+}
+.drop-content{
+    height:max-content;
+    background-color: #c6e4ef;
+    color:#050a30;
+    width:100px;
+    visibility: hidden;
+}
+/***************************************************************RESPONSIVE HEADER*******************************/
+.responsive-header{
+    display: none;
+}
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 55px;
+    top: 45px;
+    display: none;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+/* Styling the hamburger lines */
+
+.menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: white;
+    transition: all 0.5s ease-out;
+}
+
+/* Adding tranform to the X */
+
+.menu-btn.close {
+    transform: rotate(180deg);
+}
+
+
+/* Styling the three lines 
+        to make it an X */
+
+.menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+/* Styling the position of the menu icon */
+
+.menu {
+    position: absolute;
+    top: 0;
+    width: 0;
+    right: 1190px;
+    opacity: 0.9;
+    transition: 0.6s;
+}
+
+.menu.show {
+    visibility: visible;
+    right: 350px;
+}
+
+.menu-nav {
+    height: 368px;
+    width: 420px;
+    background: linear-gradient(#4b597a, #a0b9d3, #c6e4ef, #fff);
+    /* right: -66px; */
+    margin-top: 100px;
+    height: 700px;
+    position: fixed;
+    box-shadow: 41px 12px 50px inset #050a30;
+}
+
+/************************************************product**************************************************/
+.products{
+    width: 100%;
+    height:500px;
+}
+.pcontainer{
+    width: 100%;
+    margin:0 auto;
+    background-color:#c6e4ef;
+    text-align: center;
+    display: inline-flex;
+    padding-top:70PX; 
+}
+.lc{
+    height:400px;
+    width:30%;
+   /* background-color: rgba(0, 0, 0, 0.2);*/
+   background-color:#050a30;
+    justify-content:center;
+    margin:0 30px ;
+
+    box-shadow: -5px 6px 26px 2px #050a30;
+    
+}
+.product-image{
+    width: 100%;
+    height:300px;
+    position: relative;
+}
+.pimg{
+    height:100%;
+    width: 100%;
+    padding-top: 0px;
+}
+.ptitle{
+    padding-top: 20px;
+    font-family: 'Montserrat';
+    color: #c6e4ef;
+    font-size: 20px;
+    letter-spacing: 1;
+}
+.product-hover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: 0.3s;
+}
+.product-hover:hover{
+    opacity: 0.4;
+    cursor: pointer;
+}
+.product-hover:hover .ptitle{
+    color:#04d4dc;
+}
+
+/*************************************************Footer************************************************************/
+.footer{
+    height:300px;
+    width: 100%;
+    padding-bottom: 50px;
+    background-color: #050a30;
+    border-bottom: 0.5px solid rgba(200, 811, 400, 0.2);
+}
+.footer-container{
+    width:80%;
+    height: 200px;
+    margin: 0 auto;
+ //   background-color: #a0b9d3;
+}
+.ff{
+    width:20%;
+    height: 100%;
+    float:left;
+    margin:0px 30px;
+    margin-top: 60px;
+    padding:15px 5px;
+    border-right: 1px solid #c6e4ef;
+
+}
+.flogo-img{
+    height:100px;
+    width:220px;
+}
+.footer-logo > span{
+    padding-left:35px ;
+}
+.ftitle{
+    font-family:'Montserrat' ;
+    color: #04d4dc;
+    font-size: 20px;
+}
+.ff > span{
+    color:#c6e4ef;
+    font-size: 16px;
+    font-family: 'Lato';
+    
+}
+.ff > ul,.address{
+    color:#c6e4ef;
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: 500;
+}
+.ff > ul > li{
+    margin-top:8px;
+}
+.ff > ul > li:hover{
+    text-decoration: underline;
+}
+.a1:hover .address{
+    text-decoration: underline;
+}
+.getin{
+    border-right: none;
+}
+.social-container{
+    width:30%;
+    margin: 0 auto;
+    height:150px;
+}
+.social-outer{
+    background-color: #050a30;
+}
+.social{
+    text-align: center;
+    padding-top: 30px;
+}
+.sic{
+    color:#c6e4ef;
+    font-size: 25px;
+    display: inline-flex;
+    
+}
+.sic > li{
+    margin:0 30px;
+}
+.si1{
+    transition: 0.3s;
+}
+.si1:hover{
+    color:#233dff;
+}
+.copyright{
+    color: #c6e4ef;
+    font-family: 'Lato';
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+.web-container{
+    width:100%;
+    background-color: #c6e4ef;
+    color:#050a30;
+    height:30px;    
+    text-align: center;
+    font-family: 'Lato';
+    font-weight: 200;
+    word-spacing: 1;
+    padding-top: 20px;
+}
+.ic1{
+    color: #233dff;
+}
+.ic{
+    color:#04d4dc;
+    font-size: 18px;
+}
+/**********************************************************************RESPONSIVE*******************************************************/
+@media only screen and (max-width:1440px) {
+    .tinted-block {
+        width: 165px;
+        z-index: 0;
+    }
+    .footer-container {
+        width: 100%;
+    }
+    .ff{
+        margin:0px 25px;
+        margin-top: 50px;
+    }    
+   
+}
+@media only screen and (max-width:1024px) {
+    .nav1{
+        margin-right: 0;
+    }
+    .hright {
+        width: 50%;
+    }
+    .hnav{
+        width:25%;
+    }  
+    .hlogo{
+        width:250px;
+    }
+    .t1{
+        right:-90px;
+    }
+    .hright{
+        padding-top: 25px;
+    }
+    .navbar > ul{
+        font-size: 18px;
+    }
+    .tinted-block {
+        width: 145px;
+        transform: skewX(-30deg);
+    }
+    .footer-container{
+        width: 90%;
+    }
+    .ff {
+        width: 23%;
+         margin: 0px 0px; 
+         margin-top: 60px;
+         padding: 10px 8px;
+    }
+    .ff > ul, .address {
+        font-size: 16px;
+    }
+    .ftitle{
+        font-size: 19px;
+    }
+    .flogo-img{
+        width:205px;
+    }
+    .footer-logo>span{
+        padding: 0px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .tinted-block {
+        transform: skewX(-37deg);
+        height: 130px;
+        width: 100px;
+    }
+    .hlogo{
+        width: 220px;
+        height:130px;
+    }
+    .header{
+        height:100px;
+    }
+    .t2{
+        left:-50px;
+        box-shadow: -15px -3px 17px 2px rgb(0,0,0,0.7);
+    }
+    .t1{
+        right:-50px;
+        box-shadow: 10px -3px 12px 5px rgb(0,0,0,0.7);
+    }
+    .hleft,.hnav{
+        box-shadow: 0px 0px 0px ;
+    }
+    .hright{
+        font-size: 25px;
+    }
+    .nav1{
+        margin:0px;
+    }
+    .navh{
+        padding-right: 7px;
+        border-right: 1px solid #c6e4ef;
+    }
+    .product-image{
+        height: 200px;
+    }
+    .lc{
+        height: 300px;
+    }
+    .ptitle{
+        font-size: 18px;
+    }
+    .footer-container{
+        width: 100%;
+    }
+    .ff{
+        margin: 50px 0px;
+        padding:15px 18px;
+        width: 20%;
+    
+    }
+    .ff>span{
+        font-size: 15px;
+    }
+    .address{
+        font-size: 12px;
+    }
+    .flogo-img{
+        height:85px;
+        width:155px;
+    }
+    .footer-logo > span{
+        padding:0px ;
+    }
+    .sic{
+        font-size: 19px;
+    }
+    .social-container{
+        width:100%
+    }
+}
+@media only screen and (max-width:425px) {
+    .tinted-block {
+        transform: skewX(-32deg);
+        height: 90px;
+        width: 94px; 
+        z-index: -1;
+    }
+    .hlogo {
+        width: 130px;
+        height: 90px;
+    }
+    .hright{
+        padding-top: 30px;
+        font-size: 14px;
+    }
+    .navbar{
+        display: none;
+    }
+    .menu-btn{
+        display: block !important;
+        position: fixed;
+        z-index: 101;
+    }
+    .menu.show{
+        z-index: 999;
+    }
+    .menu{
+        z-index: 999;
+    }
+    .header-container{
+        position: fixed;
+        z-index: 100;
+    }
+    .responsive-header{
+        display: block !important;
+    }
+    .menu {
+        transition: 0.7s;
+    }
+    .menu-nav {
+        width: 348px;
+        height: 700px;
+        margin-top: 90px;
+    }
+    .menu.show {
+        right: 430px !important;
+    }
+    .item {
+        margin-top: 40px;
+        width: 130px;
+        padding-top: 15px;
+        margin-left: 120px;
+        font-size: 22px;
+        color: #c6e4ef;
+        font-family: 'Lato', sans-serif;
+    }
+    .i2,.i1{
+        text-align: center;
+    }
+    .i2{
+        margin-top: 20px;
+    }
+    .t2{
+        left:-50px;
+        z-index: -1;
+        box-shadow: -15px -3px 17px 2px rgb(0,0,0,0.7);
+    }
+    .t1{
+        right:-47px;
+        box-shadow: 10px -3px 12px 5px rgb(0,0,0,0.7);
+    }
+    .hnav{
+        width: 20%;
+        box-shadow: 16px -2px 21px 3px rgb(0,0,0,0.7);
+        z-index: 2;
+    }
+    .hright > img {
+        width: 150px;
+    }
+    .pcontainer{
+        flex-direction: column;
+    }
+    .lc{
+        width: 75%;
+        height: 350px;
+        margin:20 auto;
+    }
+    .product-image{
+        height: 250px;
+    }
+    .header{
+        height:90px;
+    }
+    .product-lace2{
+        padding-top:10px;
+    }
+    .footer{
+        height:670px
+    }
+    .ff {
+         width: 100%; 
+         height: 130px; 
+         float: none;   
+         margin: 0px 0px;
+         padding: 15px 0px;
+         border-right:none ;
+        /* border-right: 1px solid #c6e4ef;*/
+    }
+    .footer-logo{
+        padding-left: 0px;
+    }
+    .flogo-img{
+        height:100px;
+        width:220px;
+    }
+    .footer-container{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .social-container{
+        width:100%;
+        text-align: center;
+    }
+    .web-container{
+        height: 80px;
+    }
+    .address{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width:375px) {
+    .tinted-block {
+        transform: skewX(-27deg);
+        width: 80px;
+    }
+    .hright {
+        width: 55%;
+    }
+    .hnav{
+        box-shadow: 23px -2px 21px 3px rgb(0,0,0,0.7);
+        width:15%;
+    }
+    .menu-btn{
+        right: 35px;
+    }
+    .t1{
+        right: -52px;
+    }
+    .hright > img {
+        width: 100px;
+    }
+    .hright{
+        font-size: 12px;
+    }
+    .hlogo {
+        width: 122px;
+    }
+}
+@media only screen and (max-width:320px) {
+.tinted-block {
+    transform: skewX(-25deg);
+    height: 90px;
+    width: 73px;
+}
+.hlogo {
+    
+    height: 90px;
+}
+.hright {
+    font-size: 9px;
+}
+.menu-nav {
+    margin-top: 90px;
+}
+.header{
+    height: 90pxx;
+}
+}
